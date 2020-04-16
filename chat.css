@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    text-shadow: 0 0 1px #111;
+    background: rgba(0, 0, 0, 1);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    color: #fff;
+  	-webkit-mask-image: -webkit-gradient(linear, left 20%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+.colon { display: none; }
+
+#log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 1em 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#log .user-chat {
+    margin: 1.1em 0;
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease 15s forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease 15s forwards;
+		
+}
+
+#log .user-chat.deleted {
+    visibility: hidden;
+}
+
+#log .user-chat .base-meta {
+    text-align: center;
+}
+
+#log .message,
+#log .meta {
+    vertical-align: top;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: .5em 5em;
+    background-color: #444;
+    color: #fff;
+    /*border: 1px solid #fff;*/
+    border-radius: .25em;
+    margin-bottom: .1em;
+    background-color: #cc2302
+}
+
+#log .meta .badge,
+#log .meta .badges {
+    display: inline-block;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+
+}
+
+#log .meta .name {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+  	display: inline-block;
+      /* -webkit-transform: rotate(-.3deg);
+    -ms-transform: rotate(-.3deg);
+    transform: rotate(-.3deg); */
+  	margin-top: .3em;
+}
+
+#log .message {
+    padding-top: 1em;
+    width: 100%;
+    text-align: center;
+    padding: .6em;
+    background-color: #181818;
+    color: #fff;
+    border: 1px solid #0697ff;
+    border-radius: .5em;
+    margin-left: .4em;
+    font-weight: 600;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
